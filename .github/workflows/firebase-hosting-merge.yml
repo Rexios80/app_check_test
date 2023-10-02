@@ -23,6 +23,7 @@ jobs:
       - run: flutter pub get && flutter build web
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
+          entryPoint: not_working
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_APP_CHECK_TEST_DELETE_LATER }}"
           channelId: live
