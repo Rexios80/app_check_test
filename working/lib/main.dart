@@ -24,7 +24,7 @@ void main() async {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text('Signed in'),
-                    Text('Refreshing the page should result in sign out'),
+                    Text('Refreshing the page should NOT result in sign out'),
                   ],
                 ),
               );
