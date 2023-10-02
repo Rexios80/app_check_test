@@ -9,17 +9,30 @@ environment:
   sdk: ">=3.1.2 <4.0.0"
 
 dependencies:
+  flutter:
+    sdk: flutter
+
   firebase_app_check: ^0.2.0
   firebase_auth: ^4.10.0
   firebase_core: ^2.16.0
-  flutter:
-    sdk: flutter
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   rexios_lints: ^5.0.0
+
+dependency_overrides:
+  firebase_core_web:
+    git:
+      url: https://github.com/Rexios80/flutterfire
+      ref: 758c2aa2de8ea55d33e81fc050573b8f9ccf4cd5
+      path: packages/firebase_core/firebase_core_web
+  firebase_app_check_web:
+    git:
+      url: https://github.com/Rexios80/flutterfire
+      ref: 758c2aa2de8ea55d33e81fc050573b8f9ccf4cd5
+      path: packages/firebase_app_check/firebase_app_check_web
 
 flutter:
   uses-material-design: true
