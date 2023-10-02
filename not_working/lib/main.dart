@@ -35,11 +35,7 @@ void main() async {
                   children: [
                     const Text('Signed out'),
                     ElevatedButton(
-                      onPressed: () =>
-                          FirebaseAuth.instance.signInWithEmailAndPassword(
-                        email: 'test@test.com',
-                        password: 'pass12',
-                      ),
+                      onPressed: FirebaseAuth.instance.signInAnonymously,
                       child: const Text('Sign in'),
                     ),
                   ],
