@@ -14,35 +14,25 @@ void main() async {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: StreamBuilder(
-          stream: FirebaseAuth.instance.authStateChanges(),
-          builder: (context, snap) {
-            final user = snap.data;
-            if (user != null) {
-              return const Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text('Signed in'),
-                    Text('Refreshing the page should NOT result in sign out'),
-                  ],
-                ),
-              );
-            } else {
-              return Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const Text('Signed out'),
-                    ElevatedButton(
-                      onPressed: FirebaseAuth.instance.signInAnonymously,
-                      child: const Text('Sign in'),
-                    ),
-                  ],
-                ),
-              );
-            }
-          },
+        body: Center(
+          child: StreamBuilder(
+            stream: FirebaseAuth.instance.authStateChanges(),
+            builder: (context, snap) => Column(
+              mainAxisSize: MainAxisSize.min,
+              children: snap.data != null
+                  ? const [
+                      Text('Signed in'),
+                      Text('Refreshing the page should NOT result in sign out'),
+                    ]
+                  : [
+                      const Text('Signed out'),
+                      ElevatedButton(
+                        onPressed: FirebaseAuth.instance.signInAnonymously,
+                        child: const Text('Sign in'),
+                      ),
+                    ],
+            ),
+          ),
         ),
       ),
     ),
