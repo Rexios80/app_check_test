@@ -77,8 +77,8 @@ packages:
     dependency: "direct overridden"
     description:
       path: "packages/firebase_app_check/firebase_app_check_web"
-      ref: "758c2aa2de8ea55d33e81fc050573b8f9ccf4cd5"
-      resolved-ref: "758c2aa2de8ea55d33e81fc050573b8f9ccf4cd5"
+      ref: b1b359f793f56de70707a119f1d0914509b3d1c9
+      resolved-ref: b1b359f793f56de70707a119f1d0914509b3d1c9
       url: "https://github.com/Rexios80/flutterfire"
     source: git
     version: "0.1.0"
@@ -126,8 +126,8 @@ packages:
     dependency: "direct overridden"
     description:
       path: "packages/firebase_core/firebase_core_web"
-      ref: "758c2aa2de8ea55d33e81fc050573b8f9ccf4cd5"
-      resolved-ref: "758c2aa2de8ea55d33e81fc050573b8f9ccf4cd5"
+      ref: b1b359f793f56de70707a119f1d0914509b3d1c9
+      resolved-ref: b1b359f793f56de70707a119f1d0914509b3d1c9
       url: "https://github.com/Rexios80/flutterfire"
     source: git
     version: "2.8.0"
